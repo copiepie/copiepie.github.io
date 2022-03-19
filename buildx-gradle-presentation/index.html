@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <title>Buildx & Gradle</title>
+  <script defer src="bundle.91641449c05c9e0f452d.js"></script></head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-background-image="port-container.gif"
+          data-background-opacity="0.6"
+        >
+          <h1
+            class="r-fit-text"
+            style="text-align: left; color: navy; text-shadow: black"
+          >
+            Multiplatform Docker Images with Gradle
+          </h1>
+          <hr color="navy" />
+        </section>
+        <section
+          data-background-video="content.mp4"
+          data-background-opacity="0.6"
+          data-background-video-loop="true"
+        >
+          <h2 style="color: navy; text-align: left">Contents</h2>
+
+          <p class="fragment" style="color: navy; text-align: left">
+            Motivation
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            Manifests
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            Tools (Buildkit, Buildx)
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            Demo Demo Demo!!!
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            Limitations
+          </p>
+        </section>
+        <section
+          data-background-video="motivation.mp4"
+          data-background-opacity="0.6"
+          data-background-video-loop="true"
+        >
+          <h2 style="color: navy; text-align: left">Motivation</h2>
+          <p class="fragment" style="color: navy; text-align: left">
+            There's more than x86_64
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            apple's new M1 CPU is arm64
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            a container built for x86_64 (amd64) won't work on arm64 (at least
+            not properly)
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            Target group: Development teams using different workstations
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            we need a way to build the right image for the right platform
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            we need this to be built on a Dev's workstation and on our CI
+          </p>
+        </section>
+        <section
+          data-background-video="manifest.mp4"
+          data-background-opacity="0.6"
+          data-background-video-loop="true"
+        >
+          <h2 style="color: navy; text-align: left">
+            Multiple images with the same tag
+          </h2>
+          <p class="fragment" style="color: navy; text-align: left">
+            Made possible via manifests
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            Manifests contain meta-information about an image...
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">
+            ...which also includes the platform an image is built for
+          </p>
+        </section>
+        <section data-background-image="demo.gif" data-background-opacity="0.6">
+          <h2 style="color: navy; text-align: left">Demo for manifestts</h2>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-family: 'Courier New', Courier, monospace;
+            "
+          >
+            docker manifest inspect
+            ghcr.io/copiepie/simply-spring-rest-docker-test:1
+          </p>
+        </section>
+        <section
+          data-background-video="tools.mp4"
+          data-background-opacity="0.6"
+          data-background-video-loop="true"
+        >
+          <h2 style="color: navy; text-align: left">Tools</h2>
+          <p class="fragment" style="color: navy; text-align: left">BuildKit</p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - A project to separate the build logic
+          </p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Builder-backend for building Docker images, Install?
+          </p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Provides optimizations for multistage builds
+          </p>
+          <p class="fragment" style="color: navy; text-align: left">buildx</p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - CLI Plugin to extend docker with full support of buildkit
+          </p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Needs to be installed/activated (docker buildx install)
+          </p>
+        </section>
+        <section
+          data-background-image="gradle.gif"
+          data-background-opacity="0.6"
+        >
+          <h2 style="color: navy; text-align: left">Gradle</h2>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Build tool with dependency management support
+          </p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Rich API facilitates even tricky automation concerns
+          </p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Plugin ecosystem enables extensibility
+          </p>
+        </section>
+        <section data-background-image="demo.gif" data-background-opacity="0.6">
+          <h2 style="color: navy; text-align: left">Demo Demo Demo</h2>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Setup buildx <br />
+            <span
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                font-style: normal;
+              "
+            >
+              docker buildx install
+            </span>
+            <br />
+            <span
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                font-style: normal;
+              "
+            >
+              docker buildx create
+            </span>
+            <br />
+            <span
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                font-style: normal;
+              "
+            >
+              docker buildx ls
+            </span>
+            <br />
+            <span
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                font-style: normal;
+              "
+            >
+              docker buildx use
+            </span>
+          </p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - Plugin walkthrough <br />
+            <a target="_blank" href="https://github.com/copiepie/buildx-gradle">
+              copiepie/buildx-gradle
+            </a>
+          </p>
+          <p
+            class="fragment"
+            style="
+              color: navy;
+              text-align: left;
+              font-size: smaller;
+              font-style: italic;
+            "
+          >
+            - GitHub workflow <br />
+          </p>
+          <p
+          class="fragment"
+          style="
+            color: navy;
+            text-align: left;
+            font-size: smaller;
+            font-style: italic;
+          "
+        >
+          - The end result <br />
+          <a target="_blank" href="https://github.com/orgs/copiepie/packages/container/package/simply-spring-rest-docker-test">
+            copiepie/simply-spring-rest-docker-test
+          </a>
+        </p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
