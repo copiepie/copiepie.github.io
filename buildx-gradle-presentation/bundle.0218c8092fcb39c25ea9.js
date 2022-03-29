@@ -196,7 +196,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reveal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reveal.js */ \"./node_modules/reveal.js/dist/reveal.esm.js\");\n/* harmony import */ var reveal_js_plugin_highlight_highlight_esm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reveal.js/plugin/highlight/highlight.esm */ \"./node_modules/reveal.js/plugin/highlight/highlight.esm.js\");\n/* harmony import */ var reveal_js_dist_reveal_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reveal.js/dist/reveal.css */ \"./node_modules/reveal.js/dist/reveal.css\");\n/* harmony import */ var reveal_js_dist_theme_white_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reveal.js/dist/theme/white.css */ \"./node_modules/reveal.js/dist/theme/white.css\");\n/* harmony import */ var reveal_js_plugin_highlight_monokai_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reveal.js/plugin/highlight/monokai.css */ \"./node_modules/reveal.js/plugin/highlight/monokai.css\");\n/* harmony import */ var _img_port_container_gif__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/port-container.gif */ \"./img/port-container.gif\");\n/* harmony import */ var _img_content_mp4__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/content.mp4 */ \"./img/content.mp4\");\n/* harmony import */ var _img_motivation_mp4__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/motivation.mp4 */ \"./img/motivation.mp4\");\n/* harmony import */ var _img_docker_logo_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../img/docker_logo.png */ \"./img/docker_logo.png\");\n/* harmony import */ var _img_gradle_logo_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../img/gradle_logo.png */ \"./img/gradle_logo.png\");\n/* harmony import */ var _img_tools_mp4__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../img/tools.mp4 */ \"./img/tools.mp4\");\n/* harmony import */ var _img_gradle_gif__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../img/gradle.gif */ \"./img/gradle.gif\");\n/* harmony import */ var _img_manifest_mp4__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../img/manifest.mp4 */ \"./img/manifest.mp4\");\n/* harmony import */ var _img_demo_gif__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../img/demo.gif */ \"./img/demo.gif\");\n/* harmony import */ var _img_plugins_gif__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../img/plugins.gif */ \"./img/plugins.gif\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nreveal_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].initialize({\n    slideNumber: true,\n    showSlideNumber: 'all',\n    hash: true,\n    history: true,\n    keyboard: true,\n    touch: true,\n    plugins: [reveal_js_plugin_highlight_highlight_esm__WEBPACK_IMPORTED_MODULE_1__[\"default\"]],\n});\n\n\n//# sourceURL=webpack://buildx-gradle-plugin-presentation/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reveal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! reveal.js */ \"./node_modules/reveal.js/dist/reveal.esm.js\");\n/* harmony import */ var reveal_js_plugin_highlight_highlight_esm__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reveal.js/plugin/highlight/highlight.esm */ \"./node_modules/reveal.js/plugin/highlight/highlight.esm.js\");\n/* harmony import */ var reveal_js_dist_reveal_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reveal.js/dist/reveal.css */ \"./node_modules/reveal.js/dist/reveal.css\");\n/* harmony import */ var reveal_js_dist_theme_white_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reveal.js/dist/theme/white.css */ \"./node_modules/reveal.js/dist/theme/white.css\");\n/* harmony import */ var reveal_js_plugin_highlight_monokai_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reveal.js/plugin/highlight/monokai.css */ \"./node_modules/reveal.js/plugin/highlight/monokai.css\");\n/* harmony import */ var _img_port_container_gif__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/port-container.gif */ \"./img/port-container.gif\");\n/* harmony import */ var _img_content_mp4__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../img/content.mp4 */ \"./img/content.mp4\");\n/* harmony import */ var _img_motivation_mp4__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../img/motivation.mp4 */ \"./img/motivation.mp4\");\n/* harmony import */ var _img_docker_logo_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../img/docker_logo.png */ \"./img/docker_logo.png\");\n/* harmony import */ var _img_gradle_logo_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../img/gradle_logo.png */ \"./img/gradle_logo.png\");\n/* harmony import */ var _img_tools_mp4__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../img/tools.mp4 */ \"./img/tools.mp4\");\n/* harmony import */ var _img_gradle_gif__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../img/gradle.gif */ \"./img/gradle.gif\");\n/* harmony import */ var _img_manifest_mp4__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../img/manifest.mp4 */ \"./img/manifest.mp4\");\n/* harmony import */ var _img_demo_gif__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../img/demo.gif */ \"./img/demo.gif\");\n/* harmony import */ var _img_plugins_gif__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../img/plugins.gif */ \"./img/plugins.gif\");\n/* harmony import */ var _img_multiplatform_gif__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../img/multiplatform.gif */ \"./img/multiplatform.gif\");\n/* harmony import */ var _img_walkthrough_gif__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../img/walkthrough.gif */ \"./img/walkthrough.gif\");\n/* harmony import */ var _img_publish_gif__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../img/publish.gif */ \"./img/publish.gif\");\n/* harmony import */ var _img_thankyou_gif__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../img/thankyou.gif */ \"./img/thankyou.gif\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nreveal_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].initialize({\n    slideNumber: true,\n    showSlideNumber: 'all',\n    hash: true,\n    history: true,\n    keyboard: true,\n    touch: true,\n    plugins: [reveal_js_plugin_highlight_highlight_esm__WEBPACK_IMPORTED_MODULE_1__[\"default\"]],\n});\n\n\n//# sourceURL=webpack://buildx-gradle-plugin-presentation/./src/index.js?");
 
 /***/ }),
 
@@ -300,6 +300,16 @@ eval("module.exports = __webpack_require__.p + \"bc5777bea2e2b33d8e36.mp4\";\n\n
 
 /***/ }),
 
+/***/ "./img/multiplatform.gif":
+/*!*******************************!*\
+  !*** ./img/multiplatform.gif ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"2f7268f6899ebb3945f3.gif\";\n\n//# sourceURL=webpack://buildx-gradle-plugin-presentation/./img/multiplatform.gif?");
+
+/***/ }),
+
 /***/ "./img/plugins.gif":
 /*!*************************!*\
   !*** ./img/plugins.gif ***!
@@ -320,6 +330,26 @@ eval("module.exports = __webpack_require__.p + \"44d7e202db698b86d1ab.gif\";\n\n
 
 /***/ }),
 
+/***/ "./img/publish.gif":
+/*!*************************!*\
+  !*** ./img/publish.gif ***!
+  \*************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"6f1de3457e18ed182baa.gif\";\n\n//# sourceURL=webpack://buildx-gradle-plugin-presentation/./img/publish.gif?");
+
+/***/ }),
+
+/***/ "./img/thankyou.gif":
+/*!**************************!*\
+  !*** ./img/thankyou.gif ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"f5e52dbc6b893e25e550.gif\";\n\n//# sourceURL=webpack://buildx-gradle-plugin-presentation/./img/thankyou.gif?");
+
+/***/ }),
+
 /***/ "./img/tools.mp4":
 /*!***********************!*\
   !*** ./img/tools.mp4 ***!
@@ -327,6 +357,16 @@ eval("module.exports = __webpack_require__.p + \"44d7e202db698b86d1ab.gif\";\n\n
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"aa9ba204786def9a9243.mp4\";\n\n//# sourceURL=webpack://buildx-gradle-plugin-presentation/./img/tools.mp4?");
+
+/***/ }),
+
+/***/ "./img/walkthrough.gif":
+/*!*****************************!*\
+  !*** ./img/walkthrough.gif ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b904e9e67364d05c9538.gif\";\n\n//# sourceURL=webpack://buildx-gradle-plugin-presentation/./img/walkthrough.gif?");
 
 /***/ }),
 
