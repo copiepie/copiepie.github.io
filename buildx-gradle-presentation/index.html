@@ -4,7 +4,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
     </style>
     <title>Buildx & Gradle</title>
-  <script defer src="bundle.0218c8092fcb39c25ea9.js"></script></head>
+  <script defer src="bundle.8363871c452cd1831008.js"></script></head>
   <body>
     <div class="reveal">
       <div class="slides">
@@ -63,7 +63,7 @@
               text-align: left;
             "
           >
-            multiple images with the same tag
+            How to identify matching images for each architecture?
           </p>
           <p
             class="fragment"
@@ -254,8 +254,25 @@
               text-align: left;
             "
           >
-            Multiple images with the same tag
+            How to identify matching images for each architecture?
           </h2>
+          <p
+            class="fragment"
+            style="
+              text-transform: lowercase;
+              font-family: Chewy, sans-serif;
+              font-size: smaller;
+              color: navy;
+              text-align: left;
+            "
+          >
+            Maybe have a naming convention for tags and build for each
+            architecture separately?<br />
+            <span style="font-style: italic"
+              >(which also means our build process would be complex and thus
+              hard to maintain)</span
+            >
+          </p>
           <p
             class="fragment"
             style="
@@ -292,23 +309,6 @@
           >
             ...which also includes the platform an image is built for
           </p>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              font-size: smaller;
-              color: navy;
-              text-align: left;
-            "
-          >
-            Otherwise we would need to build completely separate images per
-            platform<br />
-            <span style="font-style: italic"
-              >(which also means our build process would be complex and thus
-              hard to maintain)</span
-            >
-          </p>
         </section>
         <section data-background-image="demo.gif" data-background-opacity="0.6">
           <h2
@@ -330,120 +330,202 @@
               font-family: 'Courier New', Courier, monospace;
             "
           >
-            docker manifest inspect
-            ghcr.io/copiepie/simply-spring-rest-docker-test:1
-          </p>
-        </section>
-        <section
-          data-background-video="tools.mp4"
-          data-background-opacity="0.6"
-          data-background-video-loop="true"
-        >
-          <h2
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-            "
-          >
-            Tools
-          </h2>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-            "
-          >
-            BuildKit
-          </p>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-              font-size: smaller;
-              font-style: italic;
-            "
-          >
-            - A project to separate the build logic separate from the building
-            frontend
-          </p>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-              font-size: smaller;
-              font-style: italic;
-            "
-          >
-            - Builder-backend for building Docker images, can be activated via
-            <span
-              style="
-                font-family: 'Courier New', Courier, monospace;
-                font-style: normal;
-              "
-              >DOCKER_BUILDKIT=1</span
+            <a
+              href="https://github.com/orgs/copiepie/packages/container/package/simply-spring-rest-docker-test"
+              target="_blank"
+              style="color: navy"
+              >docker manifest inspect
+              ghcr.io/copiepie/simply-spring-rest-docker-test:1</a
             >
           </p>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-              font-size: smaller;
-              font-style: italic;
-            "
+        </section>
+        <section>
+          <section
+            data-background-video="tools.mp4"
+            data-background-opacity="0.6"
+            data-background-video-loop="true"
           >
-            - Provides optimizations for multistage builds
-          </p>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-            "
+            <h2
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+              "
+            >
+              Tools
+            </h2>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+              "
+            >
+              BuildKit
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              - A project to separate the build logic separate from the building
+              frontend
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              - Builder-backend for building Docker images, can be activated via
+              <span
+                style="
+                  font-family: 'Courier New', Courier, monospace;
+                  font-style: normal;
+                "
+                >DOCKER_BUILDKIT=1</span
+              >
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              - Provides optimizations for multistage builds
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+              "
+            >
+              buildx
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              - CLI Plugin to extend docker with full support of buildkit
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              - Needs to be installed/activated (docker buildx install)
+            </p>
+          </section>
+          <section
+            data-background-image="multistage.gif"
+            data-background-opacity="0.6"
           >
-            buildx
+            <h2
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+              "
+            >
+              Multistage builds
+            </h2>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              Perhaps have your build containerized as well...
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              ...in order to have the same setup with the same versions (java,
+              node/npm, younameit) across all dev workstations
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              You may split your Dockerfile into several sections aka stages
+              where each stage can make use of stuff the other stages before
+              have done already,
+              <a
+                href="https://github.com/copiepie/simply-spring-rest-docker-test/blob/main/Dockerfile"
+                target="_blank"
+                >as done here</a
+              >
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+            Benefits: easier to maintain, fewer layers - thus smaller images, better performance when building (buildkit)
           </p>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-              font-size: smaller;
-              font-style: italic;
-            "
-          >
-            - CLI Plugin to extend docker with full support of buildkit
-          </p>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-              font-size: smaller;
-              font-style: italic;
-            "
-          >
-            - Needs to be installed/activated (docker buildx install)
-          </p>
+          </section>
         </section>
         <section
           data-background-image="multiplatform.gif"
