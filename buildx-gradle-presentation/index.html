@@ -4,7 +4,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
     </style>
     <title>Buildx & Gradle</title>
-  <script defer src="bundle.8363871c452cd1831008.js"></script></head>
+  <script defer src="bundle.f48e23e3b1ed3654a2d1.js"></script></head>
   <body>
     <div class="reveal">
       <div class="slides">
@@ -523,8 +523,9 @@
                 font-style: italic;
               "
             >
-            Benefits: easier to maintain, fewer layers - thus smaller images, better performance when building (buildkit)
-          </p>
+              Benefits: easier to maintain, fewer layers - thus smaller images,
+              better performance when building (buildkit)
+            </p>
           </section>
         </section>
         <section
@@ -672,7 +673,7 @@
                 font-style: normal;
               "
             >
-              sudo apt-get install -y qemu-static
+              sudo apt-get install -y qemu-user-static
             </span>
             <br />
             <span
@@ -682,6 +683,16 @@
               "
             >
               sudo apt-get install -y binfmt-support
+            </span>
+            <br />
+            <span
+              style="
+                font-family: 'Courier New', Courier, monospace;
+                font-style: normal;
+              "
+            >
+              docker buildx build --platform=linux/arm64,linux/amd64 --push -t
+              ghcr.io/copiepie/buildx-demo-march .
             </span>
           </p>
         </section>
@@ -739,57 +750,143 @@
             - Plugin ecosystem enables extensibility
           </p>
         </section>
-        <section
-          data-background-image="walkthrough.gif"
-          data-background-opacity="0.6"
-        >
-          <h2
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-            "
+        <section>
+          <section
+            data-background-image="walkthrough.gif"
+            data-background-opacity="0.6"
           >
-            Plugin walkthrough
-          </h2>
-          <p
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-              font-size: smaller;
-              font-style: italic;
-            "
+            <h2
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+              "
+            >
+              Plugin walkthrough
+            </h2>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              - A Gradle plugin consists out of
+            </p>
+            <ol
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              <li>
+                The extension, which defines the configuration for the plugin
+              </li>
+              <li>
+                The plugin code itself, which might register tasks for the
+                plugin and uses the extension
+              </li>
+              <li>
+                Tasks, which may be invoked in the script where the plugin is
+                integrated
+              </li>
+            </ol>
+          </section>
+          <section
+            data-background-image="Schema-Buildx-Gradle-Plugin.jpg"
+            data-background-size="contain"
+          ></section>
+          <section
+            data-background-image="what.gif"
+            data-background-opacity="0.6"
           >
-            - A Gradle plugin consists out of
-          </p>
-          <ol
-            class="fragment"
-            style="
-              text-transform: lowercase;
-              font-family: Chewy, sans-serif;
-              color: navy;
-              text-align: left;
-              font-size: smaller;
-              font-style: italic;
-            "
+            <h2
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+              "
+            >
+              Worthwhile mentioning
+            </h2>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              buildx doesn't register your images to the local docker registry,
+              only on remote if you choose to push
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              Instead your image lands in the local image cache
+            </p>
+            <p
+              class="fragment"
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+                font-size: smaller;
+                font-style: italic;
+              "
+            >
+              You can choose to export though to a tarball, which you can use to
+              import to your local registry <br />
+              <span style="font-family: 'Courier New', Courier, monospace">
+                $ docker buildx build --platform=linux/arm64 -t test/test -o
+                type=tar,dest=./out.tar .
+              </span>
+              <br /><br />
+              <span style="font-family: 'Courier New', Courier, monospace">
+                $ cat out.tar | docker import - test/test
+              </span>
+            </p>
+          </section>
+          <section
+            data-background-image="code.gif"
+            data-background-opacity="0.6"
           >
-            <li>
-              The extension, which defines the configuration for the plugin
-            </li>
-            <li>
-              The plugin code itself, which might register tasks for the plugin
-              and uses the extension
-            </li>
-            <li>
-              Tasks, which may be invoked in the script where the plugin is
-              integrated
-            </li>
-          </ol>
+            <h2
+              style="
+                text-transform: lowercase;
+                font-family: Chewy, sans-serif;
+                color: navy;
+                text-align: left;
+              "
+            >
+              Let's check the code!!!
+            </h2>
+          </section>
         </section>
+
         <section
           data-background-image="publish.gif"
           data-background-opacity="0.6"
